@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  longitude: 9.99
+  latitude: 9.99
+  time: 2015-04-24 12:00:40
+  user_id: MyString
+
+two:
+  longitude: 9.99
+  latitude: 9.99
+  time: 2015-04-24 12:00:40
+  user_id: MyString
