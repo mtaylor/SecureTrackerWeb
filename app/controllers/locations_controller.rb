@@ -69,6 +69,11 @@ class LocationsController < ApplicationController
     end
   end
 
+  def reset
+    Location.delete_all
+    redirect_to locations_url, notice: 'All location information has been deleted.' 
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_location
