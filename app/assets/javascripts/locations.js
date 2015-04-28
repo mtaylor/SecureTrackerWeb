@@ -8,5 +8,5 @@ $(document).ready(function() {
     sAjaxSource: $('#locations').data('source')
   });
 
-  setInterval( function () {table.api().ajax.reload();}, 5000);
+  setInterval( function () {table.api().ajax.reload();}, 1000);
 });
