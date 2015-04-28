@@ -32,7 +32,7 @@ private
   end
 
   def fetch_locations
-    locations = Location.order("#{sort_column} #{sort_direction}")
+    locations = Location.order('time DESC')
     locations = locations.page(page).per_page(per_page)
     locations
   end
