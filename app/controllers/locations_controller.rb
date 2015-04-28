@@ -4,7 +4,10 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
+    respond_to do |format|
+      format.html
+      format.json { render json: LocationsDatatable.new(view_context) }
+    end
   end
 
   # GET /locations/1
@@ -24,8 +27,13 @@ class LocationsController < ApplicationController
   # POST /locations
   # POST /locations.json
   def create
-    @location = Location.new(location_params)
+    @location = Location.new()
+    @location.user = params[:location][:user]
+    @location.latitude = params[:location][:latitude]
+    @location.longitude = params[:location][:longitude]
+    @location.time = Time.at(params[:location][:time] / 1000)
 
+    puts @location.inspect
     respond_to do |format|
       if @location.save
         format.html { redirect_to @location, notice: 'Location was successfully created.' }
@@ -69,6 +77,6 @@ class LocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
-      params.require(:location).permit(:longitude, :latitude, :time, :user_id)
+      params.require(:location).permit(:longitude, :latitude, :time, :user)
     end
 end

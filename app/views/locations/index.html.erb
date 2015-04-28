@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<table>
+<table id='locations' data-source="<%= locations_url(format: "json") %>" >
   <thead>
     <tr>
-      <th>Data ID</th>
       <th>Time</th>
       <th>User</th>
       <th>Longitude</th>
@@ -12,14 +11,5 @@
   </thead>
 
   <tbody>
-    <% @locations.each do |location| %>
-      <tr>
-      	<td><%= location.id %></td>
-      	<td><%= location.time %></td>
-        <td><%= location.user_id %></td>
-        <td><%= location.longitude %></td>
-        <td><%= location.latitude %></td>
-      </tr>
-    <% end %>
   </tbody>
 </table>

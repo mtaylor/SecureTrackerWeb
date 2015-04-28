@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150424110040) do
     t.decimal  "longitude"
     t.decimal  "latitude"
     t.datetime "time"
-    t.string   "user_id"
+    t.string   "user"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

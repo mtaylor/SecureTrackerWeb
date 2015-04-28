@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require dataTables/jquery.dataTables
  *= require_self
  */
 
@@ -25,31 +26,31 @@
 	margin-bottom: 20px;
 }
 
-table {
-  width: 100%;
-  font-size: 20px;
-  font-color: black;
-  border-radius: 10px;
-}
-
-tr td {
-  font-size: 20px;
-  padding: 15px;
-  text-align: center;
-  font-weight: bold;
-}
-
-tr th {
-  padding: 15px;
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #EEEEEE;
-}
-
-tr:nth-child(odd) {
-  background-color: #BBBBBB;
-}
+// table {
+  // width: 100%;
+  // font-size: 20px;
+  // font-color: black;
+  // border-radius: 10px;
+// }
+// 
+// tr td {
+  // font-size: 20px;
+  // padding: 15px;
+  // text-align: center;
+  // font-weight: bold;
+// }
+// 
+// tr th {
+  // padding: 15px;
+  // background-color: black;
+  // color: white;
+  // font-weight: bold;
+// }
+// 
+// tr:nth-child(even) {
+  // background-color: #EEEEEE;
+// }
+// 
+// tr:nth-child(odd) {
+  // background-color: #BBBBBB;
+// }
